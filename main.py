@@ -24,3 +24,8 @@ print("The cleaned data is",cleaned_data)
 #Scale data
 scaled_data=preprocessor.Normalize(cleaned_data)
 print("The scaled data is",scaled_data)
+
+train_date='12/31/2020 16:00:00'
+test_date='1/4/2021 16:00:00'
+data_split=preprocessor.split_data(scaled_data,train_date,test_date)
+print(f'The train shape is {data_split["train"]["input"].shape}')
