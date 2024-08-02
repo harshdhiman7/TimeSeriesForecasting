@@ -17,6 +17,10 @@ preprocessor.clean_and_transform()
 cleaned_data=preprocessor.replace_null()
 print("The cleaned data is",cleaned_data)
 
-## Visualize data
-viz=Visualize(cleaned_data)
-viz.line_plot()
+# Visualize data
+#viz=Visualize(cleaned_data)
+#viz.line_plot()
+
+#Scale data
+scaled_data=preprocessor.Normalize(cleaned_data)
+print("The scaled data is",scaled_data)

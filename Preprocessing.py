@@ -16,3 +16,14 @@ class DataPreprocessor:
           self.data.dropna(inplace=True)
           return self.data
       
+      def Normalize(self,data):
+          self.data=data
+          index=self.data.index
+          cols=self.data.columns
+          scaler=MinMaxScaler()
+          self.data=scaler.fit_transform(self.data)
+          return pd.DataFrame(self.data,columns=cols,index=index)
+      
+
+
+      
