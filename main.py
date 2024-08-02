@@ -6,7 +6,7 @@ from load_data import DataLoader
 from Preprocessing import DataPreprocessor
 from visualize import Visualize
 
-file_path='/Users/harshdhiman/Documents/Research /Codes/TimeSeriesForecasting/Dataset/Microsoft_Stock.csv'
+file_path='Dataset/Microsoft_Stock.csv'
 
 loader=DataLoader(file_path)
 data=loader.load_file()
