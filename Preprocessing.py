@@ -29,9 +29,9 @@ class DataPreprocessor:
           self.train_idx=train_date
           self.test_idx=test_date
           self.train_input=self.data.loc[:self.train_idx,['Open','High','Low','Close']]
-          self.test_input=self.data.loc[:self.test_idx,['Open','High','Low','Close']]
+          self.test_input=self.data.loc[self.test_idx:,['Open','High','Low','Close']]
           self.train_output=self.data.loc[:self.train_idx,['Volume']]
-          self.test_output=self.data.loc[:self.train_idx,['Volume']]
+          self.test_output=self.data.loc[self.test_idx:,['Volume']]
           
           return {"train": {"input":self.train_input,"output":self.train_output},
                   "test":{"input":self.test_input,"output":self.test_output}}
